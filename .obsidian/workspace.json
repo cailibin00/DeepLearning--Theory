@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "43e6d214328542cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "d5c53e08b8da446f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c036ea88ed32affc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "笔记/蒸馏/Distill BERT.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Distill BERT"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "92b99c4b17ec4611",
+    "type": "split",
+    "children": [
+      {
+        "id": "fe1591393b010686",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4a42d45f0383634",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "2a9cdbb88fa1cf80",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "1b690cf9f19dde21",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "e6274293c0b3dccb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "笔记/蒸馏/Distill BERT.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Distill BERT 的大纲"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 210.50293731689453
+  },
+  "right": {
+    "id": "2e4bc94dee9a311c",
+    "type": "split",
+    "children": [
+      {
+        "id": "5467446c77ab956f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fb9a733df5714e51",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "笔记/蒸馏/Attention Transfer.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Attention Transfer 的反向链接列表"
+            }
+          },
+          {
+            "id": "2de84b6a213c32cc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "笔记/蒸馏/Attention Transfer.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Attention Transfer 的出链列表"
+            }
+          },
+          {
+            "id": "0c90248ca5cd4537",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false
+    }
+  },
+  "active": "c036ea88ed32affc",
+  "lastOpenFiles": [
+    "笔记/图片/Pasted image 20250929202313.png",
+    "笔记/图片/Pasted image 20250929171538.png",
+    "笔记/图片/Pasted image 20250920174219.png",
+    "笔记/图片/Pasted image 20250920174334.png",
+    "笔记/图片/Pasted image 20250920174237.png",
+    "笔记/图片/Pasted image 20250920174119.png",
+    "笔记/图片/Pasted image 20250920174023.png",
+    "笔记/图片/Pasted image 20250920174007.png",
+    "笔记/图片/Pasted image 20250920173945.png",
+    "笔记/图片/Pasted image 20250920173923.png",
+    "笔记/图片/Pasted image 20250920173902.png",
+    "笔记/蒸馏/Distill BERT.md",
+    "笔记/蒸馏/学习路径.md",
+    "笔记/general/文本处理.md",
+    "笔记/general/熵.md",
+    "笔记/general/GLUE.md",
+    "文章/笔记文本处理.pdf",
+    "文章/笔记GPT2.pdf",
+    "文章/笔记BERT.pdf",
+    "文章/Distill BERT.pdf",
+    "文章/Distill BERT.pdf.crdownload",
+    "笔记/蒸馏/AFD论文.md",
+    "笔记/蒸馏/Attention Transfer.md",
+    "笔记/Attention/Attention but Diversity.md",
+    "笔记/Attention",
+    "文章/AFD_翻译版.pdf",
+    "文章/AFD_翻译版.pdf.crdownload",
+    "文章/AFD.pdf",
+    "文章/s41598-023-43986-y (1).pdf.crdownload",
+    "笔记/蒸馏/FitNet论文.md",
+    "笔记/蒸馏/Hinton论文.md",
+    "笔记/蒸馏/DIST论文.md",
+    "笔记/MoE/MoE进阶-Switch Transformer.md",
+    "笔记/MoE/MoE入门-LSTM.md",
+    "笔记/MoE/MoE进阶-GShard.md",
+    "笔记/README.md"
+  ]
+}
