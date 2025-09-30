@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "d5c53e08b8da446f",
+        "id": "7f82d790979ed19d",
         "type": "tabs",
         "children": [
           {
-            "id": "c036ea88ed32affc",
+            "id": "66fa866834bd9f9f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "笔记/蒸馏/Distill BERT.md",
-                "mode": "source",
-                "source": false
+                "file": "笔记/图片/Pasted image 20250920203526.png"
               },
-              "icon": "lucide-file",
-              "title": "Distill BERT"
+              "icon": "lucide-image",
+              "title": "Pasted image 20250920203526"
             }
           }
         ]
@@ -80,21 +78,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/蒸馏/Distill BERT.md",
+                "file": "笔记/图片/Pasted image 20250920203526.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Distill BERT 的大纲"
+              "title": "Pasted image 20250920203526 的大纲"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 210.50293731689453
+    "width": 290.50293731689453
   },
   "right": {
     "id": "2e4bc94dee9a311c",
@@ -171,43 +168,46 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "c036ea88ed32affc",
+  "active": "66fa866834bd9f9f",
   "lastOpenFiles": [
-    "笔记/图片/Pasted image 20250929202313.png",
-    "笔记/图片/Pasted image 20250929171538.png",
-    "笔记/图片/Pasted image 20250920174219.png",
-    "笔记/图片/Pasted image 20250920174334.png",
-    "笔记/图片/Pasted image 20250920174237.png",
-    "笔记/图片/Pasted image 20250920174119.png",
-    "笔记/图片/Pasted image 20250920174023.png",
-    "笔记/图片/Pasted image 20250920174007.png",
-    "笔记/图片/Pasted image 20250920173945.png",
-    "笔记/图片/Pasted image 20250920173923.png",
-    "笔记/图片/Pasted image 20250920173902.png",
-    "笔记/蒸馏/Distill BERT.md",
+    "笔记/图片/Pasted image 20250925195116.png",
+    "笔记/图片/Pasted image 20250925195227.png",
+    "笔记/图片/Pasted image 20250925202523.png",
+    "笔记/图片/Pasted image 20250927010708.png",
+    "笔记/图片/Pasted image 20250927010556.png",
+    "笔记/图片/Pasted image 20250927010433.png",
+    "笔记/图片/Pasted image 20250927010113.png",
+    "笔记/图片/Pasted image 20250927010948.png",
+    "笔记/图片/Pasted image 20250927011005.png",
+    "笔记/图片/Pasted image 20250927011100.png",
+    "笔记/图片/Pasted image 20250927011155.png",
     "笔记/蒸馏/学习路径.md",
-    "笔记/general/文本处理.md",
-    "笔记/general/熵.md",
-    "笔记/general/GLUE.md",
-    "文章/笔记文本处理.pdf",
-    "文章/笔记GPT2.pdf",
-    "文章/笔记BERT.pdf",
-    "文章/Distill BERT.pdf",
-    "文章/Distill BERT.pdf.crdownload",
-    "笔记/蒸馏/AFD论文.md",
-    "笔记/蒸馏/Attention Transfer.md",
     "笔记/Attention/Attention but Diversity.md",
-    "笔记/Attention",
-    "文章/AFD_翻译版.pdf",
-    "文章/AFD_翻译版.pdf.crdownload",
-    "文章/AFD.pdf",
-    "文章/s41598-023-43986-y (1).pdf.crdownload",
-    "笔记/蒸馏/FitNet论文.md",
-    "笔记/蒸馏/Hinton论文.md",
-    "笔记/蒸馏/DIST论文.md",
     "笔记/MoE/MoE进阶-Switch Transformer.md",
     "笔记/MoE/MoE入门-LSTM.md",
+    "笔记/图片/MoE入门-LSTM",
+    "笔记/图片/MoE进阶-Switch Transformer",
     "笔记/MoE/MoE进阶-GShard.md",
+    "笔记/图片/MoE进阶-GShard",
+    "笔记/图片/Attention but Diversity",
+    "笔记/蒸馏/FitNet论文实验.md",
+    "笔记/蒸馏/Hinton论文实验.md",
+    "笔记/蒸馏/Hinton论文实验.pdf",
+    "笔记/蒸馏/AttentionTransfer实验.pdf",
+    "笔记/蒸馏/Attention Transfer实验.md",
+    "笔记/蒸馏/FitNet论文实验.pdf",
+    "笔记/蒸馏/Hinton论文.md",
+    "笔记/蒸馏/FitNet论文.md",
+    "笔记/蒸馏/Distill BERT.md",
+    "笔记/图片/Distill BERT",
+    "笔记/蒸馏/DIST论文.md",
+    "笔记/图片/DIST论文",
+    "笔记/蒸馏/Attention Transfer.md",
+    "笔记/图片/Attention Transfer",
+    "笔记/蒸馏/AFD论文.md",
+    "笔记/general/GLUE.md",
+    "笔记/general/文本处理.md",
+    "笔记/general/熵.md",
     "笔记/README.md"
   ]
 }
