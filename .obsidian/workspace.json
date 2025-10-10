@@ -4,19 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "7f82d790979ed19d",
+        "id": "d52973554c8a5d32",
         "type": "tabs",
         "children": [
           {
-            "id": "66fa866834bd9f9f",
+            "id": "8bc99c4fd2261b70",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "笔记/图片/Pasted image 20250920203526.png"
+                "file": "笔记/README.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250920203526"
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ]
@@ -78,20 +81,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/图片/Pasted image 20250920203526.png",
+                "file": "笔记/README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Pasted image 20250920203526 的大纲"
+              "title": "README 的大纲"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 290.50293731689453
+    "width": 260.50293731689453
   },
   "right": {
     "id": "2e4bc94dee9a311c",
@@ -168,8 +171,31 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "66fa866834bd9f9f",
+  "active": "c4a42d45f0383634",
   "lastOpenFiles": [
+    "文章/Speculative Decoding.pdf",
+    "文章/Speculative Decoding.pdf.crdownload",
+    "笔记/蒸馏/Distill BERT.md",
+    "笔记/README.md",
+    "笔记/蒸馏/学习路径.md",
+    "笔记/Attention/多token输出.md",
+    "笔记/蒸馏/Attention Transfer.md",
+    "笔记/蒸馏/AFD论文.md",
+    "文章/ABD-net_翻译版.pdf",
+    "笔记/图片/AFD论文/file-20250930160432919.png",
+    "笔记/蒸馏/DIST论文.md",
+    "笔记PDF/MoE",
+    "笔记PDF/general",
+    "笔记PDF/diffusion",
+    "笔记PDF/Attention",
+    "笔记PDF/蒸馏",
+    "笔记PDF/推理",
+    "笔记PDF/多模态",
+    "笔记PDF",
+    "笔记/图片/DIST论文/file-20250930192115266.png",
+    "笔记/蒸馏/FitNet论文实验.md",
+    "笔记/蒸馏/Attention Transfer实验.md",
+    "笔记/图片/Pasted image 20250920203526.png",
     "笔记/图片/Pasted image 20250925195116.png",
     "笔记/图片/Pasted image 20250925195227.png",
     "笔记/图片/Pasted image 20250925202523.png",
@@ -177,37 +203,15 @@
     "笔记/图片/Pasted image 20250927010556.png",
     "笔记/图片/Pasted image 20250927010433.png",
     "笔记/图片/Pasted image 20250927010113.png",
-    "笔记/图片/Pasted image 20250927010948.png",
-    "笔记/图片/Pasted image 20250927011005.png",
-    "笔记/图片/Pasted image 20250927011100.png",
-    "笔记/图片/Pasted image 20250927011155.png",
-    "笔记/蒸馏/学习路径.md",
     "笔记/Attention/Attention but Diversity.md",
     "笔记/MoE/MoE进阶-Switch Transformer.md",
     "笔记/MoE/MoE入门-LSTM.md",
-    "笔记/图片/MoE入门-LSTM",
-    "笔记/图片/MoE进阶-Switch Transformer",
     "笔记/MoE/MoE进阶-GShard.md",
-    "笔记/图片/MoE进阶-GShard",
-    "笔记/图片/Attention but Diversity",
-    "笔记/蒸馏/FitNet论文实验.md",
     "笔记/蒸馏/Hinton论文实验.md",
-    "笔记/蒸馏/Hinton论文实验.pdf",
-    "笔记/蒸馏/AttentionTransfer实验.pdf",
-    "笔记/蒸馏/Attention Transfer实验.md",
-    "笔记/蒸馏/FitNet论文实验.pdf",
     "笔记/蒸馏/Hinton论文.md",
     "笔记/蒸馏/FitNet论文.md",
-    "笔记/蒸馏/Distill BERT.md",
-    "笔记/图片/Distill BERT",
-    "笔记/蒸馏/DIST论文.md",
-    "笔记/图片/DIST论文",
-    "笔记/蒸馏/Attention Transfer.md",
-    "笔记/图片/Attention Transfer",
-    "笔记/蒸馏/AFD论文.md",
     "笔记/general/GLUE.md",
     "笔记/general/文本处理.md",
-    "笔记/general/熵.md",
-    "笔记/README.md"
+    "笔记/general/熵.md"
   ]
 }

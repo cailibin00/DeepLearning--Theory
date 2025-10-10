@@ -58,3 +58,4 @@ $$L_{intra} = \frac{1}{C}\sum_{j=1}^{C}{(1 - p_j)}$$
 ### 损失函数
 $$L = \alpha L_{cls} + \beta L_{inter} + γL_{intra}$$
 
+

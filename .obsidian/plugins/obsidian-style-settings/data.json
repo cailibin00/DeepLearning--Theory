@@ -1,0 +1,11 @@
+{
+  "id@@h1-underline": false,
+  "id@@h2-underline": false,
+  "id@@headers-one-color": false,
+  "id@@h-color-theme@@light": "#FFFFFF",
+  "id@@h2-color-theme@@dark": "#6DA952",
+  "id@@h3-color-theme@@dark": "#3A8A80",
+  "id@@h4-color-theme@@dark": "#6397D6",
+  "id@@h5-color-theme@@dark": "#6C54EA",
+  "id@@h6-color-theme@@dark": "#E87575"
+}
