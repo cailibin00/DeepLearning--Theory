@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/README.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
@@ -171,12 +171,13 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "c4a42d45f0383634",
+  "active": "8bc99c4fd2261b70",
   "lastOpenFiles": [
+    "笔记/README.md",
+    "README.md",
     "文章/Speculative Decoding.pdf",
     "文章/Speculative Decoding.pdf.crdownload",
     "笔记/蒸馏/Distill BERT.md",
-    "笔记/README.md",
     "笔记/蒸馏/学习路径.md",
     "笔记/Attention/多token输出.md",
     "笔记/蒸馏/Attention Transfer.md",
@@ -191,7 +192,6 @@
     "笔记PDF/蒸馏",
     "笔记PDF/推理",
     "笔记PDF/多模态",
-    "笔记PDF",
     "笔记/图片/DIST论文/file-20250930192115266.png",
     "笔记/蒸馏/FitNet论文实验.md",
     "笔记/蒸馏/Attention Transfer实验.md",
