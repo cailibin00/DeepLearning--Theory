@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "643b7408480fb431",
+        "id": "db6687eff1ac4d7d",
         "type": "tabs",
         "children": [
           {
-            "id": "6e2e7f9b49d9a4aa",
+            "id": "2a9952d06c9f3178",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "笔记/大模型/GPT.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "GPT"
             }
           }
         ]
@@ -81,20 +81,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "笔记/大模型/GPT.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "README 的大纲"
+              "title": "GPT 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 246.50293731689453
+    "width": 200
   },
   "right": {
     "id": "2e4bc94dee9a311c",
@@ -171,8 +172,19 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "6e2e7f9b49d9a4aa",
+  "active": "2a9952d06c9f3178",
   "lastOpenFiles": [
+    "笔记/图片/GPT/file-20251012013011990.png",
+    "笔记/图片/GPT/file-20251012011907145.png",
+    "笔记/图片/GPT/file-20251012010916541.png",
+    "笔记/图片/GPT/file-20251012010044299.png",
+    "笔记/大模型/GPT.md",
+    "笔记/图片/GPT/file-20251012005939268.png",
+    "笔记/图片/图片/GPT/file-20251012005846131.png",
+    "笔记/图片/图片/GPT",
+    "笔记/图片/图片",
+    "笔记/图片/GPT/file-20251012005449093.png",
+    "README.md",
     "笔记/蒸馏/Hinton论文.md",
     "笔记/蒸馏/FitNet论文.md",
     "笔记/蒸馏/Distill BERT.md",
@@ -184,7 +196,6 @@
     "笔记/MoE/MoE进阶-GShard.md",
     "笔记/Attention/Sparse Transformers.md",
     "笔记/general/文本处理.md",
-    "笔记/大模型/GPT.md",
     "笔记/general/GLUE.md",
     "笔记/README.md",
     "笔记/MoE/MoE进阶-Switch Transformer.md",
@@ -194,24 +205,15 @@
     "笔记/图片/Hinton论文/Pasted image 20250916182959.png",
     "笔记/图片/Hinton论文/Pasted image 20250916183044.png",
     "笔记/图片/Hinton论文/Pasted image 20250916183207.png",
-    "笔记/图片/Hinton论文/Pasted image 20250916183315.png",
-    "笔记/图片/Hinton论文/Pasted image 20250916183342.png",
-    "笔记/图片/Hinton论文/Pasted image 20250916183710.png",
-    "笔记/图片/Hinton论文/Pasted image 20250916183729.png",
-    "笔记/图片/Hinton论文/Pasted image 20250916183813.png",
-    "笔记/图片/Hinton论文/Pasted image 20250916183920.png",
     "笔记/图片/Hinton论文",
     "笔记/图片/新建文件夹",
     "笔记/图片/FitNet论文",
     "笔记/大模型/学习路径.md",
-    "README.md",
     "笔记PDF/Attention/Sparse Transformers.pdf",
     "笔记PDF/Attention/Attention but Diversity.pdf",
     "笔记/图片/Sparse Transformers",
     "文章/Attention/Sparse transformer_翻译版.pdf",
     "文章/Attention/Sparse transformer_翻译版.pdf.crdownload",
-    "文章/Attention/Sparse transformer.pdf",
-    "文章/Attention/Sparse transformer.pdf.crdownload",
     "笔记/大模型/加速推理.md",
     "笔记/general/熵.md",
     "笔记/蒸馏/Hinton论文实验.md",
