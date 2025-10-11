@@ -75,5 +75,5 @@ RoBERTa 把数据量扩大到**160GB**，新增了 3 类更丰富的语料：
 计算公式
 
 $$L_{cos} = 1 - cos\theta$$
-。
+
 $$\theta = \frac{h_1 \cdot h_2}{\|h_1\| \|h_2\|} $$
