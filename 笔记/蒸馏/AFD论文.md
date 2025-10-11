@@ -9,12 +9,12 @@ AT（文献 30）是**首个将注意力图迁移引入知识蒸馏（KD）的�
 
 #### 2. **技术实现**
 - **CAM 生成**：
-    AT 基于 CNN 的全连接层权重，将其投影回**最后一层卷积特征图**，生成反映 “类别判别区域” 的 CAM。公式为：  
+AT 基于 CNN 的全连接层权重，将其投影回**最后一层卷积特征图**，生成反映 “类别判别区域” 的 CAM。公式为：  
 $$CAM_j(x, y) = \sum_{i=1}^C W_i^j A_i(x, y)$$
-    其中，  $W_i^j$  是全连接层第j类对第i通道的权重，  $A_i$  是卷积特征图。CAM 通过像素值高低表示 “该区域对类别j的重要性”。
+其中，  $W_i^j$  是全连接层第j类对第i通道的权重，  $A_i$  是卷积特征图。CAM 通过像素值高低表示 “该区域对类别j的重要性”。
 - **注意力迁移**：
-    教师将 CAM 作为 “注意力图” 传递给学生，学生通过最小化 “师生 CAM 的 MSE 损失”，学习教师的关注模式。AT 的损失函数为：  
-$$L_{AT} = \sum_{k} \frac{1}{C_k H_k W_k} \left\| \frac{\text{Norm}(CAM_{teacher}^k)}{\|\text{Norm}(CAM_{teacher}^k)\|_2} - \frac{\text{Norm}(CAM_{student}^k)}{\|\text{Norm}(CAM_{student}^k)\|_2} \right\|_2^2$$
+教师将 CAM 作为 “注意力图” 传递给学生，学生通过最小化 “师生 CAM 的 MSE 损失”，学习教师的关注模式。AT 的损失函数为：  
+$$L_{AT} = \sum_{k}^{N} \frac{1}{C_k H_k W_k} \left\| \frac{\text{Norm}(CAM_{teacher}^k)}{\|\text{Norm}(CAM_{teacher}^k)\|_2} - \frac{\text{Norm}(CAM_{student}^k)}{\|\text{Norm}(CAM_{student}^k)\|_2} \right\|_2^2$$
 
 #### 3. **贡献与局限**
 
