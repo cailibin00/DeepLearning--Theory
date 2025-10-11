@@ -8,7 +8,7 @@
 - 由于多专家在训练的时候，为了得到挑选特定专家计算得到结果（兼顾理解和计算效率），我们提出了稀疏的挑选专家策略。
 - 我们训练的时候注意到，如果选择传统top-k机制，会导致**先富后富**问题，也就是会导致先训练的专家在后续表现上面更好，这样就导致后续选择专家的时候偏向于选择已训练的专家，导致logits在部分专家的权重很大。模型失效。（这是基于统计概率上来思考问题的）    
 
-$$ KeepTopK(v,k)_i=\left\{\begin{aligned}v_i\ if\ v_i\ in\ topK\ of\ v \\-∞\ \ \ otherwise\\\end{aligned}\right.$$
+$$ KeepTopK(v,k)_i = \begin{cases} v_i & \text{if } v_i \text{ in topK of } v \\ -\infty & \text{otherwise} \end{cases} $$
 
 $$H(x)_i​=(x \cdot W_g​)_i​+StandardNormal()⋅Softplus((x\cdot W_{noise}​)_i​)$$
 
