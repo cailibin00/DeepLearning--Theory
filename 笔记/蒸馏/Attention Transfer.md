@@ -10,7 +10,7 @@
 文章给出了两种注意力
 - **激活基**
 - **梯度基**
-![](file-20250930160830897.png)
+<img src="../图片/Attention Transfer/file-20250930160830897.png">
 
 文章要解决的问题
 - 如何使得CNN学生模型利用教师的注意力map
@@ -28,7 +28,7 @@
 
 ## 注意力迁移
 
-假设输入为$A∈R^{C,W,H}$ 
+假设输入为  $A∈R^{C,W,H}$ 
 ### 隐含假设
 **隐藏神经元的绝对值，能够表征当前输入的重要指标**
 - 解释
@@ -40,7 +40,7 @@ $$F_{sum} = \sum_{i=1}^{C}|A_i|$$
 $$F_{sum}^p = \sum_{i=1}^{C}|A_i|^p$$  
 $$F_{max}^{p} = max_{i=1...C}\{A_i^p\}$$  
 - 合理性假设：
-绝对值求和能够表示该像素点在不同的channel之中被重视程度和
+绝对值求和能够表示该像素点在不同的channel之中被重视程度和  
 p>1 : 幂处理，能够拉开被注意程度之间的差距
 最大值处理，能够得到该像素在不同channel之间最被重视的程度，作为该像素点被重视程度的表征
 
@@ -52,9 +52,10 @@ p>1 : 幂处理，能够拉开被注意程度之间的差距
 1. 图像预测的目标确实和我们的映射关系有相关性；并且，性能更好的模型在目标的定位和目标的细节上关注的情况更好，这可能和他的性能有正相关。【下图1】
 2. 不同层的注意力关注的图像部分不同。【下图2】
 	 p越大，**细节剩余越少**，模型只会关注那些**激活值特别高**的区域
-	 
-![](file-20250930160859287.png)
-![](file-20250930160917726.png)
+
+<img src="../图片/Attention Transfer/file-20250930160859287.png">
+<img src="../图片/Attention Transfer/file-20250930160917726.png">
+
 
 
 ### 训练策略-损失函数
@@ -63,7 +64,8 @@ p>1 : 幂处理，能够拉开被注意程度之间的差距
 由于 CNN 不同层的注意力图对应不同层次的特征（浅层关注低阶梯度特征、中层关注目标判别区域、高层关注完整目标），为确保学生网络在**全特征层次**上都能模仿教师，通常会**跨多个层放置注意力迁移损失**。
 即不仅在某一个特定层计算师生注意力图的差异损失（就像是fitnet的策略），还会在**多个关键层**（如浅层、中层、高层）分别设置损失项，迫使学生在低、中、高各阶特征的注意力分布上均与教师对齐，避免单一层次模仿导致的特征学习片面性。
 如果**分辨率**不同，可以使用插值来处理
-![](file-20250930160955110.png)
+<img src="../图片/Attention Transfer/file-20250930160955110.png">
+
 
 
 
@@ -72,11 +74,11 @@ $$L_{AT} = L_{cls}(W_s , x) + \beta \cdot L_{transfer} + \alpha \cdot L_{distill
 $$L_{transfer} = \sum_{j∈All}{  || \frac{Q^{(s)}_{j}}{||Q^{(s)}_{j} ||_2  } - \frac{Q^{(t)}_{j}}{||Q^{(t)}_{j}||_2}  ||_{p}  }$$
 其中
 $$Q_j = Vec< F(A) >$$
-- $F$ 是上面的映射函数
-- $Vec<>$ 是把他变成一个向量，二维 $R^{H*W}$ 变成 $R^{(HW)}$  ,
-- $||Q||_2$ 是为了归一化，分子逐项相减，得到一个偏差的向量
-- 将偏差的向量$||Vec||_p$ 处理(p=2)，是为了衡量两个向量偏差向量的综合程度
-- $\beta$ 是权重，会逐渐缩小
+- $F$   是上面的映射函数
+- $Vec<>$   是把他变成一个向量，二维   $R^{H*W}$   变成   $R^{(HW)}$    
+- $||Q||_2$   是为了归一化，分子逐项相减，得到一个偏差的向量
+- 将偏差的向量  $||Vec||_p$   处理(p=2)，是为了衡量两个向量偏差向量的综合程度
+- $\beta$   是权重，会逐渐缩小
 
 ### 梯度基注意力迁移
 
@@ -85,8 +87,7 @@ $$Q_j = Vec< F(A) >$$
 给出梯度注意力的定义
 $$J_{s} = \frac{\partial }{\partial x}L(W_s , x) $$
 $$J_t = \frac{\partial }{\partial x} L(W_t ,x )$$
-得到的梯度注意力图是：
-$J ∈ R^{(C , H , W)}$ 和输入的维度一模一样
+得到的梯度注意力图是：  $J ∈ R^{(C , H , W)}$   和输入的维度一模一样
 
 **损失函数**
 $$L_{AT} = L_{cls}(W_s , x) + \frac{\beta}{2}|| J_t - J_s||_2$$
@@ -102,23 +103,25 @@ $$L_{AT} = L_{cls}(W_s , x) + \frac{\beta}{2}|| J_t - J_s||_2$$
 下面是在我自己的模型上，使用用p=2之后mean()处理：
 在Fashion-MNIST
 - 原图
-![[Pasted image 20250925195116.png|200]]
+<img src="../图片/Attention Transfer/file-20251011213528966.png" width=200>
+
 - 教师和学生的处理
-![[Pasted image 20250925195227.png]]
+<img src="../图片/Attention Transfer/Pasted image 20250925195227.png">
 其中教师网络在最后已经收敛到一个点，实际上已经做出了决策
 学生网络由于还停留在中间隐藏，还处于关注的状态
 
 在Cifar10
 - 原图
-![[Pasted image 20250925204236.png|200]]
-![[Pasted image 20250925204131.png|200]]
+<img src="../图片/Attention Transfer/Pasted image 20250925204236.png" width=200>
+<img src="../图片/Attention Transfer/Pasted image 20250925204131.png" width=200>
 - 教师和学生的pow(2).sum(dim=1)处理
-![[Pasted image 20250925202512.png]]
-![[Pasted image 20250925204149.png]]
+<img src="../图片/Attention Transfer/Pasted image 20250925202512.png" >
+<img src="../图片/Attention Transfer/Pasted image 20250925204149.png" >
+
 
 - 教师和学生的sum处理
-![[Pasted image 20250925204908.png]]
-![[Pasted image 20250925204945.png]]
+<img src="../图片/Attention Transfer/Pasted image 20250925204908.png" >
+<img src="../图片/Attention Transfer/Pasted image 20250925204945.png" >
 
 我们发现，到后面，实际上已经脱离了注意力的范畴了
 一方面，注意力关注于边界，并不是物体
@@ -137,30 +140,37 @@ $$L_{AT} = L_{cls}(W_s , x) + \frac{\beta}{2}|| J_t - J_s||_2$$
 
 ### 教师
 - 损失
-![[Pasted image 20250927010019.png]]
-![[Pasted image 20250927010038.png]]
+<img src="../图片/Attention Transfer/Pasted image 20250927010019.png" >
+<img src="../图片/Attention Transfer/Pasted image 20250927010038.png" >
+
 - 准确率
-![[Pasted image 20250927010058.png]]
-![[Pasted image 20250927010113.png]]
+<img src="../图片/Attention Transfer/Pasted image 20250927010058.png" >
+<img src="../图片/Attention Transfer/Pasted image 20250927010113.png" >
 ### 基线
 - 损失
-![[Pasted image 20250927010527.png]]
-![[Pasted image 20250927010556.png]]
+<img src="../图片/Attention Transfer/Pasted image 20250927010527.png" >
+<img src="../图片/Attention Transfer/Pasted image 20250927010556.png" >
 - 准确率
-![[Pasted image 20250927010433.png]]
-![[Pasted image 20250927010453.png]]
+
+<img src="../图片/Attention Transfer/Pasted image 20250927010433.png" >
+<img src="../图片/Attention Transfer/Pasted image 20250927010453.png" >
 ### 学生
 - AT损失
-![[Pasted image 20250927010708.png]]
-![[Pasted image 20250927010732.png]]
+<img src="../图片/Attention Transfer/Pasted image 20250927010708.png" >
+<img src="../图片/Attention Transfer/Pasted image 20250927010732.png" >
 - 蒸馏损失
-![[Pasted image 20250927010911.png]]
+<img src="../图片/Attention Transfer/Pasted image 20250927010911.png" >
+<img src="../图片/Attention Transfer/Pasted image 20250927010911.png" >
 - 总损失
-![[Pasted image 20250927011005.png]]
-![[Pasted image 20250927010948.png]]
+<img src="../图片/Attention Transfer/Pasted image 20250927011005.png" >
+![[]]
+<img src="../图片/Attention Transfer/Pasted image 20250927010948.png" >
 - 准确率
-![[Pasted image 20250927011034.png]]
-![[Pasted image 20250927011100.png]]
+<img src="../图片/Attention Transfer/Pasted image 20250927011034.png" >
+<img src="../图片/Attention Transfer/Pasted image 20250927011100.png" >
 ### 验证
-![[Pasted image 20250927010356.png]]![[Pasted image 20250927010635.png]]
-![[Pasted image 20250927011155.png]]
+<img src="../图片/Attention Transfer/Pasted image 20250927010356.png" >
+<img src="../图片/Attention Transfer/Pasted image 20250927010635.png" >
+<img src="../图片/Attention Transfer/Pasted image 20250927011155.png" >
+
+

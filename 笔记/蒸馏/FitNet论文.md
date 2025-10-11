@@ -24,26 +24,28 @@ classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship'
 3. 两种基线模型的表现要一致
 
 ### 教师网络训练结果
-![[Pasted image 20250919200728.png]]
-![[Pasted image 20250919200742.png]]
-![[Pasted image 20250919200802.png]]
-![[Pasted image 20250919200818.png]]
+<img src="../图片/FitNet论文/Pasted image 20250919200728.png" >
+<img src="../图片/FitNet论文/Pasted image 20250919200742.png" >
+<img src="../图片/FitNet论文/Pasted image 20250919200802.png" >
+<img src="../图片/FitNet论文/Pasted image 20250919200818.png" >
 
 
 ### 基线网络训练结果
-![[Pasted image 20250919200833.png]]
-![[Pasted image 20250919200848.png]]
-![[Pasted image 20250919200905.png]]
-![[Pasted image 20250919200921.png]]
+<img src="../图片/FitNet论文/Pasted image 20250919200833.png" >
+<img src="../图片/FitNet论文/Pasted image 20250919200848.png" >
+<img src="../图片/FitNet论文/Pasted image 20250919200905.png" >
+<img src="../图片/FitNet论文/Pasted image 20250919200921.png" >
+
 
 ### 学生网络蒸馏效果
 只进行蒸馏，不进行特征引导
-![[Pasted image 20250920203121.png]]
-![[Pasted image 20250920203142.png]]
-![[Pasted image 20250920203211.png]]
-![[Pasted image 20250920203231.png]]
+<img src="../图片/FitNet论文/Pasted image 20250920203121.png" >
+<img src="../图片/FitNet论文/Pasted image 20250920203142.png" >
+<img src="../图片/FitNet论文/Pasted image 20250920203211.png" >
+
+<img src="../图片/FitNet论文/Pasted image 20250920203231.png" >
 - 蒸馏分类损失
-![[Pasted image 20250920203353.png]]
+<img src="../图片/FitNet论文/Pasted image 20250920203353.png" >
 
 
 
@@ -52,42 +54,47 @@ classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship'
 前后分布训练，
 - stage one ：引导层前面的网络进行fitnet训练
 - stage two :  固定引导层以及前面的网络，进行后续网络的单独训练
-![[Pasted image 20250920161649.png]]
-![[Pasted image 20250920161711.png]]
-![[Pasted image 20250919234320.png]]
-![[Pasted image 20250919234254.png]]
-![[Pasted image 20250919234034.png]]
-![[Pasted image 20250919234056.png]]
+<img src="../图片/FitNet论文/Pasted image 20250920161649.png" >
+<img src="../图片/FitNet论文/Pasted image 20250920161711.png" >
+<img src="../图片/FitNet论文/Pasted image 20250919234320.png" >
+<img src="../图片/FitNet论文/Pasted image 20250919234254.png" >
+<img src="../图片/FitNet论文/Pasted image 20250919234034.png" >
+<img src="../图片/FitNet论文/Pasted image 20250919234056.png" >
+
  - 蒸馏各个损失记录
-![[Pasted image 20250920174334.png]]
-![[Pasted image 20250920174347.png]]
+<img src="../图片/FitNet论文/Pasted image 20250920174334.png" >
+<img src="../图片/FitNet论文/Pasted image 20250920174347.png" >
+
 
 
 
 ### 试验二
 - stage one : 在引导层以及之前做训练
 - stage two : 将stage one当作预训练来看，在预训练的基础上再次进行训练，观察否能够得到更好的效果
-![[Pasted image 20250920173843.png]]
-![[Pasted image 20250920173902.png]]
-![[Pasted image 20250920173923.png]]
-![[Pasted image 20250920173945.png]]
-![[Pasted image 20250920174007.png]]
-![[Pasted image 20250920174023.png]]
+<img src="../图片/FitNet论文/Pasted image 20250920173843.png" >
+<img src="../图片/FitNet论文/Pasted image 20250920173902.png" >
+<img src="../图片/FitNet论文/Pasted image 20250920173923.png" >
+<img src="../图片/FitNet论文/Pasted image 20250920173945.png" >
+<img src="../图片/FitNet论文/Pasted image 20250920174007.png" >
+<img src="../图片/FitNet论文/Pasted image 20250920174023.png" >
 
 - 蒸馏的各个损失记录
-![[Pasted image 20250920174219.png]]
-![[Pasted image 20250920174237.png]]
+<img src="../图片/FitNet论文/Pasted image 20250920174219.png" >
+<img src="../图片/FitNet论文/Pasted image 20250920174237.png" >
+
 
 ### 测试结果
+<img src="../图片/FitNet论文/Pasted image 20250919200952.png" >
+<img src="../图片/FitNet论文/Pasted image 20250919201010.png" >
+<img src="../图片/FitNet论文/Pasted image 20250920203526.png" >
 
-![[Pasted image 20250919200952.png]]
-![[Pasted image 20250919201010.png]]
-![[Pasted image 20250920203526.png]]
 
 - stage one
-![[Pasted image 20250919233819.png]]
+<img src="../图片/FitNet论文/Pasted image 20250919233819.png" >
+
 - stage two
-![[Pasted image 20250920174119.png]]
+<img src="../图片/FitNet论文/Pasted image 20250920174119.png" >
+
 
 
 ## 试验总结
@@ -133,7 +140,7 @@ classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship'
 
 
 ## 分类结果分析
-![[Pasted image 20250920212622.png]]
+<img src="../图片/FitNet论文/Pasted image 20250920212622.png" >
 
 - dog 和 cat 两者错误最多
 - student相较于teacher在一些方面有所提升。

@@ -3,7 +3,7 @@
 
 希望我能有所收获。
 
-- 学习路劲：
+- 学习路径：
 1. general
 2. 蒸馏 —— KD , DIST , Fit Net , AT , AFD, Distill BERT
 3. 大模型 —— 
