@@ -71,7 +71,7 @@ p>1 : 幂处理，能够拉开被注意程度之间的差距
 
 **损失函数**：
 
-$$L_{AT} = L_{cls}(W_s , x) + \beta \cdot L_{transfer} + \alpha \cdot L_{distill}$$  
+$$L_{AT} = L_{cls}(W_s , x) + \beta \cdot L_{transfer} + \alpha \cdot L_{distill}$$
 $$L_{transfer} = \sum_{j∈All}{  \| \frac{Q^{(s)}_{j}}{\|Q^{(s)}_{j} \|_2  } -\frac{Q^{(t)}_{j}}{\|Q^{(t)}_{j}\|_2}  \|_{p}}$$
 
 $$Q_j = Vec< F(A) >$$
@@ -92,7 +92,7 @@ $$J_t = \frac{\partial }{\partial x} L(W_t ,x )$$
 得到的梯度注意力图是：  $J ∈ R^{(C , H , W)}$   和输入的维度一模一样
 
 **损失函数**
-$$L_{AT} = L_{cls}(W_s , x) + \frac{\beta}{2}|| J_t - J_s||_2$$
+$$L_{AT} = L_{cls}(W_s , x) + \frac{\beta}{2}\| J_t - J_s\|_2$$
 
 值得注意的是，该注意力迁移的计算量比较大，它包含两次反向传播，第一次是计算参数的梯度，第二次是计算X的偏导数，通过损失函数再次更新学生参数。两次计算量基本相同。
 
