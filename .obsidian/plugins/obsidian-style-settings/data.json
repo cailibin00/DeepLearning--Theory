@@ -7,5 +7,12 @@
   "id@@h3-color-theme@@dark": "#3A8A80",
   "id@@h4-color-theme@@dark": "#6397D6",
   "id@@h5-color-theme@@dark": "#6C54EA",
-  "id@@h6-color-theme@@dark": "#E87575"
+  "id@@h6-color-theme@@dark": "#E87575",
+  "id@@h2-color-theme@@light": "#6DA952",
+  "id@@h3-color-theme@@light": "#3A8A80",
+  "id@@h5-color-theme@@light": "#6C54EA",
+  "id@@h4-color-theme@@light": "#6397D6",
+  "id@@h6-color-theme@@light": "#E87575",
+  "id@@h1-color-theme@@dark": "#70F30C",
+  "id@@h1-color-theme@@light": "#70F30C"
 }

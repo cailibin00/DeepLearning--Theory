@@ -4,22 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "23f6c9b3fbdb0b8a",
+        "id": "a0120f9b60515115",
         "type": "tabs",
         "children": [
           {
-            "id": "6af41876e624c3d0",
+            "id": "747d203f4982ec21",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "笔记/大模型/GPT.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
+                "file": "笔记PDF/Attention/Sparse Transformers.pdf"
               },
-              "icon": "lucide-file",
-              "title": "GPT"
+              "icon": "lucide-file-text",
+              "title": "Sparse Transformers"
             }
           }
         ]
@@ -81,20 +78,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/大模型/GPT.md",
+                "file": "笔记PDF/Attention/Sparse Transformers.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "GPT 的大纲"
+              "title": "Sparse Transformers 的大纲"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 230.50293731689453
+    "width": 273.50293731689453
   },
   "right": {
     "id": "2e4bc94dee9a311c",
@@ -171,12 +168,18 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "6af41876e624c3d0",
+  "active": "747d203f4982ec21",
   "lastOpenFiles": [
+    "笔记/Attention/Sparse Transformers.md",
+    "笔记PDF/Attention/Sparse Transformers.pdf",
+    "笔记PDF/Attention/Attention but Diversity.pdf",
+    "笔记/图片/Sparse Transformers/file-20251011174526934.png",
+    "笔记/图片/Sparse Transformers/file-20251011173753497.png",
+    "笔记/图片/Sparse Transformers",
+    "笔记/大模型/GPT.md",
     "文章/Attention/Sparse transformer_翻译版.pdf",
     "文章/Attention/Sparse transformer_翻译版.pdf.crdownload",
     "笔记/Attention/Attention but Diversity.md",
-    "笔记/大模型/GPT.md",
     "文章/Attention/Sparse transformer.pdf",
     "文章/Attention/Sparse transformer.pdf.crdownload",
     "笔记/图片/GPT/file-20251011154626002.png",
@@ -184,12 +187,8 @@
     "笔记/图片/GPT",
     "文章/大模型/gpt3.htm",
     "文章/大模型/2211.htm.crdownload",
-    "文章/大模型/GPT3.pdf",
-    "文章/大模型/GPT3.pdf.crdownload",
     "笔记/general/GLUE.md",
-    "文章/大模型/GPT2_翻译版.pdf",
     "笔记/general/文本处理.md",
-    "文章/笔记文本处理.pdf",
     "笔记/大模型/学习路径.md",
     "笔记/大模型/加速推理.md",
     "笔记/general/熵.md",
@@ -214,8 +213,6 @@
     "笔记/图片/Pasted image 20250920203526.png",
     "笔记/图片/Pasted image 20250925195116.png",
     "笔记/图片/Pasted image 20250925195227.png",
-    "笔记/图片/Pasted image 20250925202523.png",
-    "笔记/图片/Pasted image 20250927010708.png",
-    "笔记/图片/Pasted image 20250927010556.png"
+    "笔记/图片/Pasted image 20250925202523.png"
   ]
 }
