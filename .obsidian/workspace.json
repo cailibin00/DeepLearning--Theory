@@ -11,12 +11,15 @@
             "id": "747d203f4982ec21",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "笔记PDF/Attention/Sparse Transformers.pdf"
+                "file": "README.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-file-text",
-              "title": "Sparse Transformers"
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ]
@@ -78,13 +81,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记PDF/Attention/Sparse Transformers.pdf",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Sparse Transformers 的大纲"
+              "title": "README 的大纲"
             }
           }
         ]
@@ -170,8 +173,8 @@
   },
   "active": "747d203f4982ec21",
   "lastOpenFiles": [
-    "笔记/Attention/Sparse Transformers.md",
     "笔记PDF/Attention/Sparse Transformers.pdf",
+    "笔记/Attention/Sparse Transformers.md",
     "笔记PDF/Attention/Attention but Diversity.pdf",
     "笔记/图片/Sparse Transformers/file-20251011174526934.png",
     "笔记/图片/Sparse Transformers/file-20251011173753497.png",
