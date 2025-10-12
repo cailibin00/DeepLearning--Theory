@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/大模型/GPT.md",
+                "file": "笔记/大模型/学习路径.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "GPT"
+              "title": "学习路径"
             }
           }
         ]
@@ -81,13 +81,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/大模型/GPT.md",
+                "file": "笔记/大模型/学习路径.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "GPT 的大纲"
+              "title": "学习路径 的大纲"
             }
           }
         ]
@@ -171,11 +171,11 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "c4a42d45f0383634",
+  "active": "56fdb3b7152e4233",
   "lastOpenFiles": [
+    "笔记/大模型/GPT.md",
     "笔记/图片/GPT/file-20251012145930006.png",
     "笔记/README.md",
-    "笔记/大模型/GPT.md",
     "笔记/大模型/RAG.md",
     "笔记/图片/GPT/file-20251012013011990.png",
     "笔记/图片/GPT/file-20251012011907145.png",
@@ -204,7 +204,6 @@
     "笔记/图片/Speculative.md",
     "笔记/图片/Hinton论文/Pasted image 20250916182918.png",
     "笔记/图片/Hinton论文/Pasted image 20250916182959.png",
-    "笔记/图片/Hinton论文/Pasted image 20250916183044.png",
     "笔记/图片/Hinton论文",
     "笔记/图片/新建文件夹",
     "笔记/图片/FitNet论文",
