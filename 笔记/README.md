@@ -10,18 +10,23 @@
 2. 蒸馏 —— KD , DIST , Fit Net , AT , AFD, Distill BERT
 3. MoE —— GShard ， Switch Transformer
 
-- **大模型**
+- **基础大模型知识**
 1. 大模型 —— BERT，GPT2，GPT3 ，Sparse Transformer，
 2. 多模态 —— CLIP，ALBEF ，Flamingo ，BLIP-2等
 
-- **大模型拓展知识**
-1. RLHF —— 
-2. RAG —— 
-3. 规模化训练 —— 分布式训练、混合精度、梯度累积
-4. 推理优化 —— 
 
-- **顶尖模型研究**
-1. LLaMA模型
-2. GPT先进技术栈
-3. DeepSeek
+- **大模型拓展知识** —— 从GPT3入手
+1. RLHF —— 
+2. CoT 
+3. 指令微调 —— 
+4. 规模化训练 —— 分布式训练、混合精度、梯度累积
+5. 推理优化 —— 
+6. 强化学习 —— 
+
+
+- **先进大模型** 
+1. LLaVA （多模态）
+2. DeepSeek （）
+3. LLaMA （）
+
 
