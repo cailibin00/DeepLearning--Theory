@@ -94,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.50293731689453
+    "width": 215.50293731689453
   },
   "right": {
     "id": "2e4bc94dee9a311c",
@@ -173,6 +173,8 @@
   },
   "active": "38c7c9a13f6504f7",
   "lastOpenFiles": [
+    "文章/多模态/LLaVa.pdf",
+    "文章/多模态/LLaVa.pdf.crdownload",
     "笔记/多模态/ALBEF.md",
     "笔记/多模态/Flamingo.md",
     "笔记/多模态/BLIP-2.md",
@@ -199,7 +201,6 @@
     "笔记/大模型/GPT.md",
     "笔记/图片/ALBEF",
     "笔记/图片/ALBEF/file-20251014165357964.png",
-    "笔记/图片/Align before Fuse",
     "笔记/多模态/CLIP.md",
     "笔记/MoE/MoE入门-LSTM.md",
     "笔记/MoE/MoE进阶-GShard.md",
