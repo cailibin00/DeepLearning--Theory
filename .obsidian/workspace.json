@@ -11,10 +11,15 @@
             "id": "196927b549c6ff47",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "笔记/README.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "README"
             }
           }
         ]
@@ -166,8 +171,10 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "c4a42d45f0383634",
+  "active": "196927b549c6ff47",
   "lastOpenFiles": [
+    "笔记/大模型/RAG.md",
+    "文章/多模态/Align before Fuse.pdf",
     "笔记/README.md",
     "文章/大模型/RLHF和指令微调.pdf",
     "文章/大模型/Codex.pdf",
@@ -184,7 +191,6 @@
     "笔记/图片/BLIP-2/file-20251020173224962.png",
     "笔记/图片/BLIP-2/file-20251020173139967.png",
     "笔记/图片/BLIP-2",
-    "文章/多模态/BLIP2_翻译版.pdf",
     "README.md",
     "笔记/图片/Flamingo/file-20251020144418763.png",
     "笔记/图片/Flamingo/file-20251020142823762.png",
@@ -204,7 +210,6 @@
     "文章/未命名.md",
     "笔记/大模型/加速推理.md",
     "笔记/蒸馏/学习路径.md",
-    "笔记/大模型/RAG.md",
     "笔记/蒸馏/Hinton论文.md",
     "笔记/蒸馏/FitNet论文.md",
     "笔记/蒸馏/Distill BERT.md",
