@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "caca00fb350958df",
+        "id": "fc27bf081a862d28",
         "type": "tabs",
         "children": [
           {
-            "id": "38c7c9a13f6504f7",
+            "id": "196927b549c6ff47",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/多模态/BLIP-2.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "BLIP-2"
+              "title": "新标签页"
             }
           }
         ]
@@ -94,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 215.50293731689453
+    "width": 273.50293731689453
   },
   "right": {
     "id": "2e4bc94dee9a311c",
@@ -171,19 +166,25 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "38c7c9a13f6504f7",
+  "active": "c4a42d45f0383634",
   "lastOpenFiles": [
+    "笔记/README.md",
+    "文章/大模型/RLHF和指令微调.pdf",
+    "文章/大模型/Codex.pdf",
+    "文章/多模态/Codex.pdf",
+    "文章/多模态/Codex.pdf.crdownload",
+    "文章/多模态/RLHF和指令微调.pdf",
+    "文章/多模态/RLHF和指令微调.pdf.crdownload",
+    "笔记/多模态/LLaVa.md",
+    "笔记/多模态/BLIP-2.md",
     "文章/多模态/LLaVa.pdf",
     "文章/多模态/LLaVa.pdf.crdownload",
     "笔记/多模态/ALBEF.md",
     "笔记/多模态/Flamingo.md",
-    "笔记/多模态/BLIP-2.md",
     "笔记/图片/BLIP-2/file-20251020173224962.png",
     "笔记/图片/BLIP-2/file-20251020173139967.png",
     "笔记/图片/BLIP-2",
     "文章/多模态/BLIP2_翻译版.pdf",
-    "文章/多模态/BLIP2_翻译版.pdf.crdownload",
-    "笔记/README.md",
     "README.md",
     "笔记/图片/Flamingo/file-20251020144418763.png",
     "笔记/图片/Flamingo/file-20251020142823762.png",
@@ -191,15 +192,9 @@
     "笔记/图片/Flamingo/file-20251020115952545.png",
     "笔记/图片/Flamingo/file-20251020114636880.png",
     "笔记/图片/Flamingo/file-20251020114523378.png",
-    "笔记/图片/Flamingo",
-    "文章/多模态/CLIP_翻译版.pdf",
-    "文章/多模态/Flamingo.pdf",
-    "文章/多模态/Flamingo.pdf.crdownload",
-    "文章/多模态/BLIP2.pdf",
     "笔记/图片/ALBEF/file-20251020110817430.png",
     "笔记/Attention/Sparse Transformers.md",
     "笔记/大模型/GPT.md",
-    "笔记/图片/ALBEF",
     "笔记/图片/ALBEF/file-20251014165357964.png",
     "笔记/多模态/CLIP.md",
     "笔记/MoE/MoE入门-LSTM.md",
@@ -217,7 +212,6 @@
     "笔记/蒸馏/Attention Transfer.md",
     "笔记/蒸馏/AFD论文.md",
     "笔记/general/文本处理.md",
-    "笔记/general/GLUE.md",
-    "笔记/MoE/MoE进阶-Switch Transformer.md"
+    "笔记/general/GLUE.md"
   ]
 }
