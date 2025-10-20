@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d0db2d5c03cfa870",
+        "id": "6b077674eb2070a5",
         "type": "tabs",
         "children": [
           {
-            "id": "eca4a6276b6c590b",
+            "id": "ec4319580b28f020",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/多模态/CLIP.md",
+                "file": "笔记/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "CLIP"
+              "title": "README"
             }
           }
         ]
@@ -81,13 +81,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/多模态/CLIP.md",
+                "file": "笔记/多模态/ALBEF.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "CLIP 的大纲"
+              "title": "ALBEF 的大纲"
             }
           }
         ]
@@ -171,24 +171,29 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "c4a42d45f0383634",
+  "active": "ec4319580b28f020",
   "lastOpenFiles": [
+    "笔记/多模态/ALBEF.md",
+    "笔记/README.md",
+    "笔记/Attention/Sparse Transformers.md",
+    "笔记/大模型/GPT.md",
+    "笔记/图片/ALBEF",
+    "笔记/图片/ALBEF/file-20251014165357964.png",
+    "笔记/图片/Align before Fuse",
+    "笔记/多模态/CLIP.md",
+    "笔记/MoE/MoE入门-LSTM.md",
+    "笔记/MoE/MoE进阶-GShard.md",
     "文章/多模态/Align before Fuse_翻译版.pdf",
     "文章/多模态/Align before Fuse_翻译版.pdf.crdownload",
     "文章/多模态/Align before Fuse.pdf",
     "文章/多模态/Align before Fuse.pdf.crdownload",
     "笔记/多模态/学习路径.md",
-    "笔记/多模态/CLIP.md",
     "笔记/图片/CLIP/file-20251013210125867.png",
     "笔记/图片/CLIP",
     "文章/多模态/CLIP_翻译版.pdf",
     "文章/多模态/CLIP_翻译版.pdf.crdownload",
-    "笔记/大模型/GPT.md",
-    "笔记/README.md",
     "笔记/大模型/学习路径.md",
     "文章/多模态/CLIP.pdf",
-    "文章/多模态/CLIP.pdf.crdownload",
-    "文章/多模态",
     "文章/未命名.md",
     "笔记/大模型/加速推理.md",
     "笔记/蒸馏/学习路径.md",
@@ -200,7 +205,6 @@
     "笔记/图片/GPT/file-20251012010044299.png",
     "笔记/图片/GPT/file-20251012005939268.png",
     "笔记/图片/图片/GPT/file-20251012005846131.png",
-    "笔记/图片/图片/GPT",
     "笔记/图片/GPT/file-20251012005449093.png",
     "README.md",
     "笔记/蒸馏/Hinton论文.md",
@@ -209,15 +213,10 @@
     "笔记/蒸馏/DIST论文.md",
     "笔记/蒸馏/Attention Transfer.md",
     "笔记/蒸馏/AFD论文.md",
-    "笔记/MoE/MoE入门-LSTM.md",
-    "笔记/MoE/MoE进阶-GShard.md",
-    "笔记/Attention/Sparse Transformers.md",
     "笔记/general/文本处理.md",
     "笔记/general/GLUE.md",
     "笔记/MoE/MoE进阶-Switch Transformer.md",
     "笔记/Attention/Attention but Diversity.md",
-    "笔记/图片/Speculative.md",
-    "笔记/图片/Hinton论文/Pasted image 20250916182918.png",
-    "笔记/general/熵.md"
+    "笔记/图片/Speculative.md"
   ]
 }

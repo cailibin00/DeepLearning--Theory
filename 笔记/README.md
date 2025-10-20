@@ -12,7 +12,7 @@
 
 - **大模型**
 1. 大模型 —— BERT，GPT2，GPT3 ，Sparse Transformer，
-2. 多模态 —— CLIP，ALBEF 等
+2. 多模态 —— CLIP，ALBEF ，Flamingo ，BLIP-2等
 
 - **大模型拓展知识**
 1. RLHF —— 
