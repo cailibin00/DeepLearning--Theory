@@ -90,7 +90,8 @@
               "title": "InstructGPT 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -171,14 +172,19 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "0955efe90bc96a83",
+  "active": "e6274293c0b3dccb",
   "lastOpenFiles": [
-    "笔记/general/熵.md",
+    "笔记/大模型/Codex——GPT3.5.md",
     "笔记/大模型/InstructGPT.md",
+    "笔记/图片/InstructGPT/file-20251021204218881.png",
+    "笔记/图片/InstructGPT/file-20251021204033586.png",
+    "笔记/图片/InstructGPT/file-20251021203703636.png",
+    "笔记/图片/InstructGPT/file-20251021202949460.png",
+    "笔记/图片/InstructGPT/file-20251021195548630.png",
+    "笔记/general/熵.md",
     "文章/大模型/InstructGPT.pdf",
     "笔记/图片/InstructGPT/file-20251021145822470.png",
     "笔记/图片/InstructGPT",
-    "笔记/大模型/Codex——GPT3.5.md",
     "笔记/图片/Codex——GPT3.5/file-20251021125430926.png",
     "笔记/图片/Codex——GPT3.5/file-20251021124028672.png",
     "笔记/图片/Codex——GPT3.5/file-20251021123729375.png",
@@ -198,12 +204,7 @@
     "笔记/多模态/BLIP-2.md",
     "笔记/多模态/ALBEF.md",
     "笔记/多模态/Flamingo.md",
-    "笔记/图片/BLIP-2/file-20251020173224962.png",
-    "笔记/图片/BLIP-2/file-20251020173139967.png",
     "README.md",
-    "笔记/图片/Flamingo/file-20251020144418763.png",
-    "笔记/图片/Flamingo/file-20251020142823762.png",
-    "笔记/图片/Flamingo/file-20251020120614225.png",
     "笔记/Attention/Sparse Transformers.md",
     "笔记/多模态/CLIP.md",
     "笔记/MoE/MoE入门-LSTM.md",
@@ -217,7 +218,6 @@
     "笔记/蒸馏/FitNet论文.md",
     "笔记/蒸馏/Distill BERT.md",
     "笔记/蒸馏/DIST论文.md",
-    "笔记/蒸馏/Attention Transfer.md",
-    "笔记/蒸馏/AFD论文.md"
+    "笔记/蒸馏/Attention Transfer.md"
   ]
 }
