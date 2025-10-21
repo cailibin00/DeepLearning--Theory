@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/大模型/InstructGPT.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "InstructGPT"
+              "title": "README"
             }
           }
         ]
@@ -81,17 +81,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/大模型/InstructGPT.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "InstructGPT 的大纲"
+              "title": "README 的大纲"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -172,10 +171,10 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "e6274293c0b3dccb",
+  "active": "0955efe90bc96a83",
   "lastOpenFiles": [
-    "笔记/大模型/Codex——GPT3.5.md",
     "笔记/大模型/InstructGPT.md",
+    "笔记/大模型/Codex——GPT3.5.md",
     "笔记/图片/InstructGPT/file-20251021204218881.png",
     "笔记/图片/InstructGPT/file-20251021204033586.png",
     "笔记/图片/InstructGPT/file-20251021203703636.png",
