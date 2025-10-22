@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "笔记/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "笔记/README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -110,17 +110,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/蒸馏/Attention Transfer.md",
+                "file": "笔记/大模型/CoT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Attention Transfer 的反向链接列表"
+              "title": "CoT 的反向链接列表"
             }
           },
           {
@@ -129,12 +129,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/蒸馏/Attention Transfer.md",
-                "linksCollapsed": false,
+                "file": "笔记/大模型/CoT.md",
+                "linksCollapsed": true,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Attention Transfer 的出链列表"
+              "title": "CoT 的出链列表"
             }
           },
           {
@@ -152,8 +152,7 @@
               "title": "标签"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -171,9 +170,19 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "0955efe90bc96a83",
+  "active": "c4a42d45f0383634",
   "lastOpenFiles": [
     "笔记/大模型/InstructGPT.md",
+    "文章/大模型/Lean4.pdf",
+    "文章/大模型/Lean4.pdf.crdownload",
+    "笔记/大模型/CoT.md",
+    "笔记/图片/CoT/file-20251022150226412.png",
+    "笔记/图片/CoT/file-20251022012922044.png",
+    "笔记/图片/CoT/file-20251022012003895.png",
+    "笔记/图片/CoT",
+    "笔记/README.md",
+    "笔记/大模型/学习路径.md",
+    "README.md",
     "笔记/大模型/Codex——GPT3.5.md",
     "笔记/图片/InstructGPT/file-20251021204218881.png",
     "笔记/图片/InstructGPT/file-20251021204033586.png",
@@ -185,38 +194,28 @@
     "笔记/图片/InstructGPT/file-20251021145822470.png",
     "笔记/图片/InstructGPT",
     "笔记/图片/Codex——GPT3.5/file-20251021125430926.png",
-    "笔记/图片/Codex——GPT3.5/file-20251021124028672.png",
-    "笔记/图片/Codex——GPT3.5/file-20251021123729375.png",
-    "笔记/图片/Codex——GPT3.5/file-20251021123604080.png",
     "笔记/图片/Codex——GPT3.5",
     "笔记/大模型/GPT.md",
-    "笔记/README.md",
     "笔记/大模型/RAG.md",
     "文章/多模态/Align before Fuse.pdf",
     "文章/大模型/RLHF和指令微调.pdf",
     "文章/大模型/Codex.pdf",
     "文章/多模态/Codex.pdf",
-    "文章/多模态/Codex.pdf.crdownload",
-    "文章/多模态/RLHF和指令微调.pdf",
-    "文章/多模态/RLHF和指令微调.pdf.crdownload",
     "笔记/多模态/LLaVa.md",
     "笔记/多模态/BLIP-2.md",
     "笔记/多模态/ALBEF.md",
     "笔记/多模态/Flamingo.md",
-    "README.md",
     "笔记/Attention/Sparse Transformers.md",
     "笔记/多模态/CLIP.md",
     "笔记/MoE/MoE入门-LSTM.md",
     "笔记/MoE/MoE进阶-GShard.md",
     "笔记/多模态/学习路径.md",
-    "笔记/大模型/学习路径.md",
     "文章/未命名.md",
     "笔记/大模型/加速推理.md",
     "笔记/蒸馏/学习路径.md",
     "笔记/蒸馏/Hinton论文.md",
     "笔记/蒸馏/FitNet论文.md",
     "笔记/蒸馏/Distill BERT.md",
-    "笔记/蒸馏/DIST论文.md",
-    "笔记/蒸馏/Attention Transfer.md"
+    "笔记/蒸馏/DIST论文.md"
   ]
 }
