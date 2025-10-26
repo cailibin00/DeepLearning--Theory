@@ -163,7 +163,6 @@ $$L_{AT} = L_{cls}(W_s , x) + \frac{\beta}{2}\| J_t - J_s\|_2$$
 <img src="../图片/Attention Transfer/Pasted image 20250927010911.png" >
 - 总损失
 <img src="../图片/Attention Transfer/Pasted image 20250927011005.png" >
-![[]]
 <img src="../图片/Attention Transfer/Pasted image 20250927010948.png" >
 - 准确率
 <img src="../图片/Attention Transfer/Pasted image 20250927011034.png" >
