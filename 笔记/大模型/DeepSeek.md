@@ -134,24 +134,118 @@ $$P_e=\sum_{i=0}^{I}{\frac{每一个token的概率p_i}{token数量I}}$$
 
 ### 负载均衡（V3升级）
 1. SoftMax函数改为 Sigmoid：使用sigmoid可以允许模型在更大的专家集合上进行选择，而不像softmax函数倾向于将输入分配给少数几个专家（有严格排序）。
-$$h^{'}_{t} = u_t + \sum_{i=1}^{N_{share}}FFN^{(share)}_{i,t}(u_t)+\sum_{i=1}^{N_{router}}g_{i,t}FFN^{(router)}_{i,t}(u_t) \tag{1}$$
-$$s_{t,i}=Softmax(u^T_{t,i}e_{t,i})\tag{2}$$
+$$h^{'}_{t} = u_t + \sum_{i=1}^{N_{share}}FFN^{(share)}_{i,t}(u_t)+\sum_{i=1}^{N_{router}}g_{i,t}FFN^{(router)}_{i,t}(u_t) \tag{19}$$
+$$s_{t,i}=Softmax(u^T_{t,i}e_{t,i})\tag{20}$$
 $$p^{'}_{t,i}=
 \begin{cases}
 s_{t,i}& {s_{t,i}∈{TopK}}\\
 0&\text{otherwise}
-\end{cases}\tag{3}$$
-$$p^{'}_{t,i} = \frac{p_{t,i}}{\sum_{j=0}^{N_{router}}{p_{t,j}}}\tag{4}$$
+\end{cases}\tag{21}$$
+$$p^{'}_{t,i} = \frac{p_{t,i}}{\sum_{j=0}^{N_{router}}{p_{t,j}}}\tag{22}$$
 2. **过大的损失函数损害了模型的性能**，因此V3抛弃了前面的辅助函数办法。b初始化全部相同，在后续训练中，如果负载不均，则对相应的权重b增加或者减少 **γ**大小来调整。不用反向传播，而是通过动态调整阈值来控制。
 $$p^{'}_{t,i}=
 \begin{cases}
 s_{t,i}& {s_{t,i}+b_i∈{TopK}}\\
 0&\text{otherwise}
-\end{cases}\tag{3'}$$
+\end{cases}\tag{21'}$$
 
 3. 在序列维度添加辅助损失函数，防止一个序列极端不平衡情况发生（我也不知道为什么），计算过程和前面原理相同。
 
 
 ## GRPO
+### PPO
+#### 梯度策略计算
+本节最终得到公式（27）
+
+这是一种强化学习的算法，他基于马尔可夫链，假设
+- 活动轨迹（记住轨迹的标记）为  $\tau=[s_1,a_1,s_2,a_2....]$   
+- 策略网络为  $\pi(a|s;\theta)$  表示在当前状态和当前参数下，走出action的概率，Π表示当前模型
+
+- **这一条路径走到底的概率**：
+$$\pi(\tau|\theta) = p(s_1)\pi(a_1|\theta,s_1)p(s_2|a_1,s_1)......\pi(a_T|\theta,s_T) = p(s_1)\prod_{i=1}^{T}{\pi(a_i|\theta,s_i)}p(s_{T+1}|s_{T},a_{T})  \tag{23}$$
+$$log(\pi(\tau|\theta)) = log(p(s_1)) + \sum_{t=1}^{T}log[\pi(a_i|s_{i},\theta) +p(s_{t+1}|s_t,a_t)]\tag{24}$$
+- **这一条路径的奖励**：
+$$R(\tau) = r_1+r_2+...+r_T = \sum r_i \tag{25}$$
+
+- 算法优化的目标：最大化所有路径的奖励
+$$J(\theta) = E_{\tau \sim \pi(\tau|\theta)} R(\tau) = \sum_{\tau}\pi(\tau|\theta)R(\tau)\tag{26}$$
+这个时候出现了问题，所有路径计算均值，时间复杂度太高。因此需要用 **采样**来替代整体。
+
+$$J(\theta) = \frac{1}{N}\sum_{\tau}^{N}R(\tau)\pi(\tau|\theta) \tag{27}$$
+问题又出现了，每一轮训练完都需要重新采样，但是采样（通过智能体和环境交互，记录当前路径的各种奖励等数据，用于后续的计算）又开销大，但是不重新采样又不适应当前的分布，怎么办？
+
+#### 重要性采样
+上面一轮一采样就是同策略，这里要说异策略。
+- 朴素的想法：进行一次采样，后面来纠正。
+$$\int{f(x)p(x)}dx =\int{f(x)\frac{p(x)}{q(x)}q(x)dx} = E_{x\sim q(x)}(f(x)\frac{p(x)}{q(x)})$$
+
+我们引入了旧的分布q(x)，利用重要性权重  $\frac{p(x)}{q(x)}$  进行更新，在现有权重大于原有权重时候，重要性权重增大，有一个纠正作用，反之亦然。  这样我们就能在旧的采样上使用新的分布来计算了，美哉。
+
+- 异策略：
+$$J(\theta) = E_{\tau \sim \pi(\tau|\theta)}(\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*R(\tau)) \tag{28}$$
+#### 优势函数-baseline
+本节最终得到了公式（31）。
+
+咱就是说，只给模型奖励不给模型惩罚，或者不给模型最低标准，那他们都一直表现得很好，只是表现得多好，这肯定是不行的。我们希望奖励有正有负，负的当然是要被抑制的，因为R对于这个路线是一定的，我们要训练的是参数，拟合一条最好的路径，如果这个路径不好肯定要给他分配负的奖励，不能让模型选择它。
+
+$$A(\tau) = R(\tau) - baseline(叫做b)\tag{29}$$
+$$J(\theta) = E_{\tau \sim \pi(\tau|\theta)}(\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A(\tau)) \tag{30}$$
+- 经过采样的优化之后：
+$$J(\theta) = \frac{1}{N}\sum_{\tau=1}^{N}\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A(\tau) \tag{31}$$
+至此，得到了最终的策略函数
 
 
+#### 惩罚
+本节得到公式（32）
+
+针对的问题：我们异策略可能对分布差异过大的预估效果没那么好，那该怎么办。
+换种方式来说：PPO的更新依赖“经验数据”（旧策略和环境交互得到），要是新旧策略差异过大，旧策略的经验（表现为采样）和新策略脱节，导致策略函数出现偏差。拟合旧的策略，实际上也是一种平衡的过程。（如果这个时候旧策略不代表落伍，而代表某种需要保存的特性，那就更好了）
+- 很朴素的思想：不要让他们偏差太大，KL散度惩罚！！
+$$argmax_{\theta} \{E_{\tau \sim \pi(\tau|\theta)}[\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A(\tau)] - \beta KL(\pi^{new},\pi^{old})\} \tag{32}$$
+- 其中β是动态调整的，一定范围外和KL成正比，这里不作介绍。
+- 采样改进之后的公式不做展示
+
+#### 截断
+本节得到公式（33）
+
+这是针对于策略函数，防止策略函数太过激进。
+
+$$J(\theta) = \frac{1}{N}\sum_{\tau}min\left(\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A(\tau) ， CLIP(\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})},1-ε,1+ε)*A(\tau)\right) \tag{33}$$
+- A>0 ，重要性权重过大，裁剪在1+ε
+- A<0 ，重要性权重过小，裁剪在1-ε
+
+
+#### RLHF-PPO
+- 结构
+1. actor：根据prompt生成多个Responds
+2. critic：根据Responds判断基准（baseline），用于计算优势函数
+3. reward model：计算得分（奖励）
+4. reference：作为原先的采样
+
+
+### GRPO
+#### 改进
+1. 去掉critic
+2. 改进KL散度
+
+#### 优势函数
+抛弃了为每一个token生成基准的过程，虽然这给了不同的token不同的反馈力度，但是critic需要在原模型的末端加架构，计算量庞大。
+
+$$A_i = \frac{r_i - mean}{std} \tag{34}$$
+
+#### KL散度
+$$D_{KL}(\pi_{\theta},\pi_{ref}) = \frac{\pi_{\text{ref}}(o_{i,t} | q, o_{i,<t})}{\pi_\theta(o_{i,t} | q, o_{i,<t})} - log(\frac{\pi_{\text{ref}}(o_{i,t} | q, o_{i,<t})}{\pi_\theta(o_{i,t} | q, o_{i,<t})}) -1 \tag{35}$$
+- q代表输入提示词，o代表模型自己的输出
+- 防止对词汇表全部元素进行计算的数值问题和计算量问题
+- 同样能够拟合符合条件的token
+
+
+#### Loss
+$$L_{GRPO}(\theta) = E_{[q\sim P(Q),\{o\}_{i=1}^G\sim \pi(O|q,\theta^{old})] }(Y) \tag{36}$$
+$$Y=\frac{1}{G}\sum_{i=1}^{G}\frac{1}{|o_i|}\sum_{t=1}^{|o_i|}\left(min\left(r_{i,t}*A(\tau),CLIP(r_{i,t},1-ε,1+ε)*A(\tau)\right)-D_{KL}(\pi_{\theta},\pi_{ref})\right)$$
+$$r_{i,t}(\theta) = \frac{\pi(o_{i,t}|\theta^{new},o_{i,<t})}{\pi(o_{i,t}|\theta^{old},o_{i,<t})}$$
+
+- 解释：损失函数是针对于多个提示词的多个响应，每一个响应上的多个token，其中包含了裁剪，和KL散度的计算。
+- P(Q)是提示分布,{o}表示重要性采样的思想
+- $\frac{1}{|o|}$  是为了平衡不同长度的respond
+- i表示当前respond（一个prompt的responds数量为G），t表示当前token
