@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/大模型/DeepSeek.md",
+                "file": "笔记/general/分布式训练.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "DeepSeek"
+              "title": "分布式训练"
             }
           }
         ]
@@ -81,17 +81,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/大模型/DeepSeek.md",
+                "file": "笔记/general/分布式训练.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "DeepSeek 的大纲"
+              "title": "分布式训练 的大纲"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -173,20 +172,32 @@
   },
   "active": "8b447a35ed7b0569",
   "lastOpenFiles": [
+    "笔记/general/量化.md",
+    "笔记/general/LoRA微调.md",
+    "笔记/图片/LoRA微调/file-20251105144350656.png",
+    "笔记/图片/LoRA微调/file-20251104215337045.png",
+    "笔记/图片/LoRA微调/file-20251104212755283.png",
+    "笔记/图片/LoRA微调",
+    "笔记/general/分布式训练.md",
+    "笔记/图片/分布式训练/file-20251104002306422.png",
+    "笔记/大模型/DeepSeek.md",
+    "笔记/图片/DeepSeek/file-20251104002005261.png",
+    "笔记/图片/分布式训练/file-20251103234747196.png",
+    "笔记/图片/分布式训练/file-20251103214751406.png",
+    "笔记/图片/分布式训练/file-20251103204823070.png",
+    "笔记/图片/分布式训练/file-20251103204812849.png",
+    "笔记/图片/分布式训练/file-20251103204400598.png",
+    "README.md",
+    "笔记/图片/分布式训练",
+    "笔记/大模型/学习路径.md",
+    "文章/general",
     "笔记/大模型/CoT.md",
     "笔记/大模型/Codex——GPT3.5.md",
     "笔记/大模型/GPT.md",
     "笔记/视觉/OCR.md",
-    "笔记/图片/OCR/file-20251026133248194.png",
-    "笔记/大模型/DeepSeek.md",
-    "笔记/大模型/学习路径.md",
     "笔记/大模型/InstructGPT.md",
     "文章/大模型/InstructGPT.pdf",
     "笔记/MoE/MoE进阶-GShard.md",
-    "笔记/图片/DeepSeek/file-20251027144932850.png",
-    "笔记/图片/DeepSeek/file-20251027144748589.png",
-    "笔记/图片/DeepSeek/file-20251027105401543.png",
-    "笔记/图片/DeepSeek/file-20251027103655148.png",
     "笔记/图片/DeepSeek",
     "笔记/大模型/RAG.md",
     "笔记/README.md",
@@ -195,16 +206,7 @@
     "文章/视觉/DeepSeek-V3.pdf.crdownload",
     "文章/视觉/deep seek：OCR.pdf",
     "文章/视觉/deep seek：OCR.pdf.crdownload",
-    "笔记/图片/OCR/file-20251026141422626.png",
-    "笔记/图片/OCR/file-20251026140238306.png",
-    "笔记/图片/OCR/file-20251026135928354.png",
-    "文章/大模型/CoT.pdf",
-    "文章/大模型/Codex.pdf",
-    "笔记/图片/OCR",
-    "笔记/图片/OCR/file-20251026112904696.png",
     "笔记/蒸馏/Attention Transfer.md",
-    "笔记/图片/RAG/file-20251022214753550.png",
-    "README.md",
     "笔记/general/熵.md",
     "笔记/多模态/LLaVa.md",
     "笔记/多模态/BLIP-2.md",
@@ -214,9 +216,6 @@
     "笔记/多模态/CLIP.md",
     "笔记/MoE/MoE入门-LSTM.md",
     "笔记/多模态/学习路径.md",
-    "文章/未命名.md",
-    "笔记/大模型/加速推理.md",
-    "笔记/蒸馏/学习路径.md",
-    "笔记/蒸馏/Hinton论文.md"
+    "文章/未命名.md"
   ]
 }
