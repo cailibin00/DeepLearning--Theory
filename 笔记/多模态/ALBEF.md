@@ -1,5 +1,4 @@
 **ALBEF(Align before Fuse)**，先align对齐再fuse融合
-../图片/ALBEF/
 ## 前言
 读过CLIP的朋友知道我的头脑风暴，已经在这篇文章中实现了。
 

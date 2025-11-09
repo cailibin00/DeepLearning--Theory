@@ -1,7 +1,5 @@
-本文档记录了DeepSeek的模型改进，训练和数据集情况。
+本文档整理了部分DeepSeek的关键技术。
 ## MLA
-参考资料：[绝世好文：知乎DeepSeek的MLA讲解](https://zhuanlan.zhihu.com/p/16730036197)
-
 本章将在介绍MLA之前，顺带讲解背景知识：模型推理的显存占用，KV Cache，小部分矩阵乘法知识。
 
 ### transformer推理
