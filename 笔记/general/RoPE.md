@@ -48,3 +48,5 @@ $$\boldsymbol{R}_{\theta, m}^d \boldsymbol{x} = \begin{pmatrix} x_0 \\ x_1 \\ x_
 
 ## 参考资料
 1. [知乎文章](https://zhuanlan.zhihu.com/p/647109286)
+
+苏剑林大佬的博客:
