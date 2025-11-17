@@ -170,6 +170,7 @@ $$J(\theta) = E_{\tau \sim \pi(\tau|\theta)} R(\tau) = \sum_{\tau}\pi(\tau|\thet
 这个时候出现了问题，所有路径计算均值，时间复杂度太高。因此需要用 **采样**来替代整体。
 
 $$J(\theta) = \frac{1}{N}\sum_{\tau}^{N}R(\tau)\pi(\tau|\theta) \tag{27}$$
+
 问题又出现了，每一轮训练完都需要重新采样，但是采样（通过智能体和环境交互，记录当前路径的各种奖励等数据，用于后续的计算）又开销大，但是不重新采样又不适应当前的分布，怎么办？
 
 #### 重要性采样
@@ -182,11 +183,13 @@ $$\int{f(x)p(x)}dx =\int{f(x)\frac{p(x)}{q(x)}q(x)dx} = E_{x\sim q(x)}(f(x)\frac
 - 异策略：
 $$J(\theta) = E_{\tau \sim \pi(\tau|\theta)}(\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*R(\tau)) \tag{28}$$
 #### 优势函数-baseline
+这里也叫做Value函数，或者叫做批判家。
+
 本节最终得到了公式（31）。
 
-咱就是说，只给模型奖励不给模型惩罚，或者不给模型最低标准，那他们都一直表现得很好，只是表现得多好，这肯定是不行的。我们希望奖励有正有负，负的当然是要被抑制的，因为R对于这个路线是一定的，我们要训练的是参数，拟合一条最好的路径，如果这个路径不好肯定要给他分配负的奖励，不能让模型选择它。
+我们需要对模型有一个基本的预期表现，如果这个奖励无法超过预期表现，意味着他需要被丢掉或者需要被优化，如果没有这个预期表现，那么模型可能无法收敛到一个预期的表现。
 
-$$A(\tau) = R(\tau) - baseline(叫做b)\tag{29}$$
+$$A(\tau) = R(\tau) - baseline(\tau)\tag{29}$$
 $$J(\theta) = E_{\tau \sim \pi(\tau|\theta)}(\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A(\tau)) \tag{30}$$
 - 经过采样的优化之后：
 $$J(\theta) = \frac{1}{N}\sum_{\tau=1}^{N}\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A(\tau) \tag{31}$$
@@ -227,9 +230,11 @@ $$J(\theta) = \frac{1}{N}\sum_{\tau}min\left(\frac{\pi(x|\theta^{new})}{\pi(x|\t
 2. 改进KL散度
 
 #### 优势函数
-抛弃了为每一个token生成基准的过程，虽然这给了不同的token不同的反馈力度，但是critic需要在原模型的末端加架构，计算量庞大。
+在PPO中，它使用批判家鞭策每一个分布的改进，它要求有更多的参数加载到内存中，我们需要优化。
 
-$$A_i = \frac{r_i - mean}{std} \tag{34}$$
+GRPO直接删掉了批判模型，反而使用群体平均值和方差，利用群体的期望作为标准，期盼分布表现的改进。
+
+$$r_i = \frac{r_i - mean}{std} \tag{34}$$
 
 #### KL散度
 $$D_{KL}(\pi_{\theta},\pi_{ref}) = \frac{\pi_{\text{ref}}(o_{i,t} | q, o_{i,<t})}{\pi_\theta(o_{i,t} | q, o_{i,<t})} - log(\frac{\pi_{\text{ref}}(o_{i,t} | q, o_{i,<t})}{\pi_\theta(o_{i,t} | q, o_{i,<t})}) -1 \tag{35}$$
@@ -237,6 +242,9 @@ $$D_{KL}(\pi_{\theta},\pi_{ref}) = \frac{\pi_{\text{ref}}(o_{i,t} | q, o_{i,<t})
 - 防止对词汇表全部元素进行计算的数值问题和计算量问题
 - 同样能够拟合符合条件的token
 
+$$f(x) = x-logx-1$$
+- 这个函数很大于0
+- 导数得到结果，他在1取到最小值，左右边都是单调的（函数图像）
 
 #### Loss
 $$L_{GRPO}(\theta) = E_{[q\sim P(Q),\{o\}_{i=1}^G\sim \pi(O|q,\theta^{old})] }(Y) \tag{36}$$
