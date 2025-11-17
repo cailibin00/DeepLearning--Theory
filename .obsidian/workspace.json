@@ -90,8 +90,7 @@
               "title": "后训练——强化学习的讨论 的大纲"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -171,7 +170,7 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "e6274293c0b3dccb",
+  "active": "c4a42d45f0383634",
   "lastOpenFiles": [
     "笔记/图片/后训练——强化学习的讨论/file-20251117110638172.png",
     "笔记/图片/后训练——强化学习的讨论/file-20251117110029332.png",
