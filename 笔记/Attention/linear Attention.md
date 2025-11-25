@@ -1,4 +1,6 @@
 ## 问题
+一个`A,B` 和`B,C`形状矩阵相乘，计算复杂度是O(ABC)
+
 文中讨论了Attention计算复杂度的问题，我们先来使用简化模型讲解计算复杂度
 
 $$Atten(Q,K,V) = Softmax(QK^T)V$$
@@ -34,7 +36,7 @@ $$Atten = softmax_d(Q)*softmax_d(K)\frac{V}{\sqrt{d}}$$
 使用泰勒公式
 
 $$e^{q^Tk} = 1+q^Tk$$
-- 为了放置负号
+- 为了防止负号
 $$e^{q^Tk} = 1+\frac{q^T}{\|q\|}\frac{k}{\|k\|}$$
 
 但是，实际上他只改变了softmax的一部，没有改进其他步骤，提升的计算量非常有限，还不能确保原来的精度。

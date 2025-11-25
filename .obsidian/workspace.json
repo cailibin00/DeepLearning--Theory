@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "240a246c8c3dfe0e",
+        "id": "52d8276f7d0209c6",
         "type": "tabs",
         "children": [
           {
-            "id": "3ba2d27662b4bbbb",
+            "id": "43b9d5fa359c793e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "笔记/Agent/Agent范式.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Agent范式"
             }
           }
         ]
@@ -81,16 +81,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "笔记/Agent/Agent范式.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "README 的大纲"
+              "title": "Agent范式 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -170,52 +171,53 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "3ba2d27662b4bbbb",
+  "active": "e6274293c0b3dccb",
   "lastOpenFiles": [
-    "笔记/大模型/后训练——强化学习的讨论.md",
-    "笔记/图片/后训练——强化学习的讨论/file-20251117110638172.png",
-    "笔记/图片/后训练——强化学习的讨论/file-20251117110029332.png",
-    "笔记/图片/后训练——强化学习的讨论/file-20251117110013914.png",
-    "笔记/图片/后训练——强化学习的讨论/file-20251117105953837.png",
-    "笔记/图片/后训练——强化学习的讨论",
+    "笔记/Agent/学习路线.md",
+    "笔记/Agent/Agent范式.md",
+    "文章/agent/Reflexion.pdf",
+    "文章/agent/Reflexion.pdf.crdownload",
+    "文章/agent/ToT.pdf",
+    "文章/agent/ToT.pdf.crdownload",
+    "文章/agent",
+    "文章/新建文件夹",
+    "笔记/Agent/调用外部工具.md",
+    "笔记/Attention/Flash Attention.md",
+    "笔记/Agent",
+    "文章/general/flash_attention原文.pdf",
+    "文章/general/flash_attention原文.pdf.crdownload",
+    "文章/general/flash_attention.pdf.crdownload",
+    "笔记/Attention/linear Attention.md",
+    "笔记/Attention/Sparse Transformers.md",
+    "笔记/general/RoPE.md",
+    "笔记/强化学习/TD vs MC.md",
+    "笔记/强化学习/reinforce.md",
+    "笔记/MoE/MoE进阶-Switch Transformer.md",
+    "笔记/MoE/MoE进阶-GShard.md",
+    "笔记/MoE/MoE入门-LSTM.md",
     "笔记/大模型/DeepSeek.md",
+    "笔记/图片/DeepSeek/file-20251118144155040.png",
+    "笔记/图片/reinforce/file-20251118122031505.png",
+    "笔记/图片/DeepSeek/file-20251118120346971.png",
+    "笔记/图片/reinforce/file-20251118115542847.png",
+    "笔记/图片/reinforce/file-20251118114914220.png",
+    "笔记/图片/reinforce/file-20251118113323727.png",
+    "笔记/图片/reinforce/file-20251118105945015.png",
+    "笔记/图片/reinforce/file-20251118105930787.png",
+    "笔记/图片/reinforce/file-20251118104257871.png",
+    "笔记/图片/reinforce/file-20251118103642482.png",
+    "笔记/未命名.md",
+    "笔记/大模型/后训练——强化学习的讨论.md",
     "笔记/大模型/RAG.md",
-    "文章/大模型/大模型水印.pdf",
-    "文章/大模型/大模型水印.pdf.crdownload",
-    "文章/大模型/模块RAG.pdf",
-    "文章/大模型/模块RAG.pdf.crdownload",
-    "笔记/图片/RAG/file-20251113201055211.png",
-    "笔记/图片/RAG/file-20251113174153659.png",
-    "笔记/图片/RAG/file-20251113170321418.png",
-    "笔记/图片/RAG/file-20251113173916466.png",
-    "笔记/图片/RAG/file-20251113172621187.png",
-    "笔记/图片/RAG/file-20251113170215421.png",
+    "笔记/大模型/InstructGPT.md",
+    "笔记/大模型/LLaMA.md",
+    "README.md",
     "笔记/general/分布式训练.md",
     "笔记/general/GLUE.md",
-    "笔记/Attention/linear Attention.md",
     "笔记/Attention/Attention but Diversity.md",
-    "笔记/图片/linear Attention",
-    "文章/图片/linear Attention",
-    "文章/图片",
-    "笔记/Attention/Sparse Transformers.md",
-    "笔记PDF/图片/linear Attention",
-    "笔记PDF/图片",
-    "笔记/general/RoPE.md",
-    "笔记/大模型/LLaMA.md",
     "笔记/多模态/Qwen多模态.md",
     "笔记/多模态/LLaVa.md",
-    "笔记/大模型/InstructGPT.md",
     "笔记/大模型/学习路径.md",
-    "笔记/多模态/Flamingo.md",
-    "笔记/多模态/CLIP.md",
-    "笔记/多模态/BLIP-2.md",
-    "笔记/多模态/ALBEF.md",
-    "笔记/多模态/学习路径.md",
-    "笔记/大模型/GPT.md",
-    "笔记/大模型/CoT.md",
-    "笔记/大模型/Codex——GPT3.5.md",
-    "笔记/大模型/加速推理.md",
-    "笔记/蒸馏/学习路径.md",
-    "笔记/蒸馏/AFD论文.md"
+    "笔记/多模态/Flamingo.md"
   ]
 }

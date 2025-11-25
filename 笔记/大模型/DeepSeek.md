@@ -151,6 +151,7 @@ s_{t,i}& {s_{t,i}+b_i∈{TopK}}\\
 
 
 ## GRPO
+强化学习这一块讲的不太成熟，可以在[reinforce](reinforce.md) 中学到基础知识。
 ### PPO
 #### 梯度策略计算
 本节最终得到公式（27）
@@ -181,7 +182,11 @@ $$\int{f(x)p(x)}dx =\int{f(x)\frac{p(x)}{q(x)}q(x)dx} = E_{x\sim q(x)}(f(x)\frac
 我们引入了旧的分布q(x)，利用重要性权重  $\frac{p(x)}{q(x)}$  进行更新，在现有权重大于原有权重时候，重要性权重增大，有一个纠正作用，反之亦然。  这样我们就能在旧的采样上使用新的分布来计算了，美哉。
 
 - 异策略：
-$$J(\theta) = E_{\tau \sim \pi(\tau|\theta)}(\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*R(\tau)) \tag{28}$$
+$$J(\theta) = E_{\tau \sim \pi(\tau|\theta^{old})}(\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*R_{old}(\tau)) \tag{28}$$
+
+- **流程：**
+PPO 收集数据 → 使用这些数据更新策略几次 → 丢弃旧数据 → 重新采样新轨迹
+
 #### 优势函数-baseline
 这里也叫做Value函数，或者叫做批判家。
 
@@ -190,9 +195,9 @@ $$J(\theta) = E_{\tau \sim \pi(\tau|\theta)}(\frac{\pi(x|\theta^{new})}{\pi(x|\t
 我们需要对模型有一个基本的预期表现，如果这个奖励无法超过预期表现，意味着他需要被丢掉或者需要被优化，如果没有这个预期表现，那么模型可能无法收敛到一个预期的表现。
 
 $$A(\tau) = R(\tau) - baseline(\tau)\tag{29}$$
-$$J(\theta) = E_{\tau \sim \pi(\tau|\theta)}(\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A(\tau)) \tag{30}$$
+$$J(\theta) = E_{\tau \sim \pi(\tau|\theta^{old})}(\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A_{old}(\tau)) \tag{30}$$
 - 经过采样的优化之后：
-$$J(\theta) = \frac{1}{N}\sum_{\tau=1}^{N}\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A(\tau) \tag{31}$$
+$$J(\theta) = \frac{1}{N}\sum_{\tau=1}^{N}\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A_{old}(\tau) \tag{31}$$
 至此，得到了最终的策略函数
 
 
@@ -202,7 +207,7 @@ $$J(\theta) = \frac{1}{N}\sum_{\tau=1}^{N}\frac{\pi(x|\theta^{new})}{\pi(x|\thet
 针对的问题：我们异策略可能对分布差异过大的预估效果没那么好，那该怎么办。
 换种方式来说：PPO的更新依赖“经验数据”（旧策略和环境交互得到），要是新旧策略差异过大，旧策略的经验（表现为采样）和新策略脱节，导致策略函数出现偏差。拟合旧的策略，实际上也是一种平衡的过程。（如果这个时候旧策略不代表落伍，而代表某种需要保存的特性，那就更好了）
 - 很朴素的思想：不要让他们偏差太大，KL散度惩罚！！
-$$argmax_{\theta} \{E_{\tau \sim \pi(\tau|\theta)}[\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A(\tau)] - \beta KL(\pi^{new},\pi^{old})\} \tag{32}$$
+$$argmax_{\theta} \{E_{\tau \sim \pi(\tau|\theta^{old})}[\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A_{old}(\tau)] - \beta KL(\pi^{new},\pi^{old})\} \tag{32}$$
 - 其中β是动态调整的，一定范围外和KL成正比，这里不作介绍。
 - 采样改进之后的公式不做展示
 
@@ -214,7 +219,7 @@ $$argmax_{\theta} \{E_{\tau \sim \pi(\tau|\theta)}[\frac{\pi(x|\theta^{new})}{\p
 $$J(\theta) = \frac{1}{N}\sum_{\tau}min\left(\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})}*A(\tau) ， CLIP(\frac{\pi(x|\theta^{new})}{\pi(x|\theta^{old})},1-ε,1+ε)*A(\tau)\right) \tag{33}$$
 - A>0 ，重要性权重过大，裁剪在1+ε
 - A<0 ，重要性权重过小，裁剪在1-ε
-
+![](file-20251118120346971.png)
 
 #### RLHF-PPO
 - 结构
@@ -225,6 +230,7 @@ $$J(\theta) = \frac{1}{N}\sum_{\tau}min\left(\frac{\pi(x|\theta^{new})}{\pi(x|\t
 
 
 ### GRPO
+![](file-20251118144155040.png)
 #### 改进
 1. 去掉critic
 2. 改进KL散度
@@ -248,10 +254,14 @@ $$f(x) = x-logx-1$$
 
 #### Loss
 $$L_{GRPO}(\theta) = E_{[q\sim P(Q),\{o\}_{i=1}^G\sim \pi(O|q,\theta^{old})] }(Y) \tag{36}$$
-$$Y=\frac{1}{G}\sum_{i=1}^{G}\frac{1}{|o_i|}\sum_{t=1}^{|o_i|}\left(min\left(r_{i,t}*A(\tau),CLIP(r_{i,t},1-ε,1+ε)*A(\tau)\right)-D_{KL}(\pi_{\theta},\pi_{ref})\right)$$
+$$Y=\frac{1}{G}\sum_{i=1}^{G}\frac{1}{|o_i|}\sum_{t=1}^{|o_i|}\left(min\left(r_{i,t}*\hat{A}(\tau),CLIP(r_{i,t},1-ε,1+ε)*\hat{A}(\tau)\right)-D_{KL}(\pi_{\theta},\pi_{ref})\right)$$
 $$r_{i,t}(\theta) = \frac{\pi(o_{i,t}|\theta^{new},o_{i,<t})}{\pi(o_{i,t}|\theta^{old},o_{i,<t})}$$
+- 对于  $r_{i,t}$  ,优势函数有
+$$\hat{A}(\tau) = \frac{R_{i,t} - \overline{R_{\sim,t}}}{σ} \tag{37}$$
+$$R_{i,t} = \sum_{t=0}^{T}\gamma^{t}reward_{(i,t)}$$
 
 - 解释：损失函数是针对于多个提示词的多个响应，每一个响应上的多个token，其中包含了裁剪，和KL散度的计算。
 - P(Q)是提示分布,{o}表示重要性采样的思想
 - $\frac{1}{|o|}$  是为了平衡不同长度的respond
 - i表示当前respond（一个prompt的responds数量为G），t表示当前token
+- 工业场景中，G通常是3-5
